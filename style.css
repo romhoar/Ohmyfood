@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+.color1 {
+  color: #9356dc;
+}
+.color2 {
+  color: #ff79da;
+}
+.color3 {
+  color: #99e2d0;
+}
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 3px 3px 1px rgb(224, 222, 222);
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+main .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
+}
+main .city i {
+  font-size: 1.5rem;
+}
+
+/* EXPLORER */
+
+.explorer {
+  text-align: center;
+  background-color: #f3f3f3;
+}
+.explorer h2 {
+  margin-top: 50px;
+  font-size: 25px;
+}
+.explorer p {
+  font-size: 1rem;
+}
+.explorer button {
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  color: white;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  transition: 200ms;
+  margin-top: 1rem;
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* TUTO */
+
+.fonction {
+    width: 80%;
+    padding: 1.4rem 2.3rem;
+    background-color: #f6f6f6;
+    text-align: center;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    
+    
+}
+.tuto i {
+    margin-right: 3rem;
+    color: rgb(187, 173, 173);
+}
+.tuto i:hover {
+    color: #9356dc;
+}
+.tuto {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
