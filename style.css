@@ -36,6 +36,7 @@ main .city i {
 }
 .decorationNone {
   text-decoration: none;
+  color: black;
 }
 
 /* EXPLORER */
@@ -160,4 +161,24 @@ main .city i {
   height: 200px;
   object-fit: cover;
   border-radius: 2rem 2rem 0 0;
+}
+.card_description h3 p {
+  margin: 0.5rem;
+
+}
+.new {
+  position: relative;
+
+}
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  width: 5rem;
+  height: 2rem;
+  background-color: #99e2d0;
+  display: grid;
+  place-items: center;
+  color: #669287;
+  right: 1rem;
+  top: 1rem;
 }
