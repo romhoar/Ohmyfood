@@ -132,12 +132,7 @@ main .city i {
   margin-bottom: 2rem;
   padding: 2rem;
   margin: 0;
-}
-.card {
-  border: 1px solid black;
-  height: 4rem;
-  flex-grow: 1;
-  min-width: 30rem;
+
 }
 .menu_cards {
   display: grid;
@@ -148,27 +143,61 @@ main .city i {
   background-color: white;
   height: auto;
   width: 95%;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  flex-grow: 1;
 }
 .card_image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 .card_image {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 1rem;
 }
-.card_description h3 p {
-  margin: 0.5rem;
+.card_description {
+  position: relative;
+ 
+}
+.card_description h3 {
+  margin: 0;
+  padding-left: 0.4rem;
+}
+.card_description p {
+  margin: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.card_description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 
 }
+.card_description .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms case-in-out;
+}
+.card_description:hover .fa-solid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
 .new {
   position: relative;
-
+  
 }
 .new::before {
   content: "Nouveau";
@@ -182,3 +211,29 @@ main .city i {
   right: 1rem;
   top: 1rem;
 }
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(73, 67, 67);
+  padding: 0.5rem;
+  margin-top: 3rem;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-serif";
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+footer p {
+  color: white;
+  padding: 0.2rem;
+}
+footer i {
+  gap: 1rem;
+}
+
+
+
