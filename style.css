@@ -28,7 +28,7 @@ main .city {
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: #d4d4d4;
   padding: 0.5rem;
 }
 main .city i {
@@ -44,10 +44,12 @@ main .city i {
 .explorer {
   text-align: center;
   background-color: #f3f3f3;
+  padding-bottom: 3rem;
 }
 .explorer h2 {
-  margin-top: 50px;
+  margin: 0;
   font-size: 25px;
+  padding-top: 2.5rem;
 }
 .explorer p {
   font-size: 1rem;
@@ -117,9 +119,10 @@ main .city i {
   .tuto ol {
     flex-direction: column;
   }
-  h2 {
+  .tuto h2 {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
   }
 }
 
@@ -132,6 +135,8 @@ main .city i {
   margin-bottom: 2rem;
   padding: 2rem;
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
 
 }
 .menu_cards {
