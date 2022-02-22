@@ -1,0 +1,54 @@
+.tuto li {
+    list-style-type: none;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+    background-color: #f6f6f6;
+    text-align: center;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    position: relative;
+  }
+  .number {
+    background-color: #9356dc;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 1rem;
+    left: -1rem;
+  }
+  .tuto i {
+    margin-right: 1rem;
+    color: rgb(187, 173, 173);
+  }
+  .tuto i:hover {
+    color: #9356dc;
+  }
+  .tuto {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .tuto ol {
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;
+  }
+  @media screen and (max-width: 1000px) {
+    .tuto ol {
+      flex-direction: column;
+    }
+    .tuto h2 {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+  }
+  

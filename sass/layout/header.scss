@@ -1,0 +1,16 @@
+main .city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: #d4d4d4;
+    padding: 0.5rem;
+  }
+  main .city i {
+    font-size: 1.5rem;
+  }
+  .decorationNone {
+    text-decoration: none;
+    color: black;
+  }

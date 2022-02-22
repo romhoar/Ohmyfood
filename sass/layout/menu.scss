@@ -1,0 +1,88 @@
+.menu {
+    background-color: #f6f6f6;
+  }
+  .menu h2 {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  
+  }
+  .menu_cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2);
+  }
+  .card {
+    background-color: white;
+    height: auto;
+    width: 95%;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    flex-grow: 1;
+  }
+  .card_image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .card_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 1rem;
+  }
+  .card_description {
+    position: relative;
+   
+  }
+  .card_description h3 {
+    margin: 0;
+    padding-left: 0.4rem;
+  }
+  .card_description p {
+    margin: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card_description i {
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  
+  }
+  .card_description .fa-solid {
+    color: transparent;
+    background-image: linear-gradient(to top, #9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms case-in-out;
+  }
+  .card_description:hover .fa-solid {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  .new {
+    position: relative;
+    
+  }
+  .new::before {
+    content: "Nouveau";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    background-color: #99e2d0;
+    display: grid;
+    place-items: center;
+    color: #669287;
+    right: 1rem;
+    top: 1rem;
+  }

@@ -1,0 +1,28 @@
+.explorer {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-bottom: 3rem;
+  }
+  .explorer h2 {
+    margin: 0;
+    font-size: 25px;
+    padding-top: 2.5rem;
+  }
+  .explorer p {
+    font-size: 1rem;
+  }
+  .explorer button {
+    background-image: linear-gradient(to top, #9356dc, #ff79da);
+    color: white;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+    transition: 200ms;
+    margin-top: 1rem;
+  }
+  .explorer button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
