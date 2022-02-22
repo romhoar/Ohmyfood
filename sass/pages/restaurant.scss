@@ -56,13 +56,16 @@ body {
     .menu-groupe {
       background-color: white;
       
+      
       .menu-items {
         display: flex;
         overflow: hidden;
         @include mixins.base-shadow;
         border-radius: 1rem;
+        margin-bottom: 1rem;
         .description-items {
           padding: 1rem;
+          
         }
         .price {
           margin-left: auto;
@@ -99,4 +102,25 @@ body {
     }
       
   }
+  .command {
+    display: flex;
+    justify-content: center;
+ 
+  button {
+    background-image: linear-gradient(to top, #9356dc, #ff79da);
+  color: white;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  transition: 200ms;
+  margin-top: 1rem;
+  }
+  &:hover {
+    transform: scale(1.02);
+  opacity: 0.9;
+
+  }
+}
   

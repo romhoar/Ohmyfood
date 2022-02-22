@@ -374,6 +374,7 @@ body {
   overflow: hidden;
   box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.75);
   border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 .menu-grid .menu-groupe .menu-items .description-items {
   padding: 1rem;
@@ -405,6 +406,26 @@ body {
 }
 .menu-grid .menu-groupe .menu-items:hover .items__check {
   margin-right: 0;
+}
+
+.command {
+  display: flex;
+  justify-content: center;
+}
+.command button {
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  color: white;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  transition: 200ms;
+  margin-top: 1rem;
+}
+.command:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
