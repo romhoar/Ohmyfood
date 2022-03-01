@@ -1,6 +1,7 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss"; 
 @use "../utils/variables.scss";
+@use "../utils/animation.scss";
 
 body {
     background-color: colors.$lightergrey;
@@ -53,18 +54,49 @@ body {
     @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
     }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      position: relative;
+      &::after {
+        content: "";
+        height: 0.25rem;
+        width: 3rem;
+        background-color: colors.$color-tertiary;
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+
+      }
+}
+  
     .menu-groupe {
-      background-color: white;
+      
+      overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       
       
       .menu-items {
+        background-color: white;
         display: flex;
         overflow: hidden;
         @include mixins.base-shadow;
         border-radius: 1rem;
-        margin-bottom: 1rem;
+        
+        overflow: hidden;
+        margin: 0.5rem;
+        
+        text-overflow: ellipsis;
         .description-items {
           padding: 1rem;
+          overflow: hidden;
+        
+        h4, p {
+          overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        }
           
         }
         .price {
@@ -77,6 +109,7 @@ body {
         .items__check {
           display: grid;
           place-items: center;
+          flex-shrink: 0;
           background-color: colors.$color-tertiary;
           margin-right: -4rem;
           $button-width: 4rem;
@@ -93,20 +126,26 @@ body {
           place-items: center;
           color: colors.$color-tertiary;
         }
-        &:hover .items__check {
+        &:hover {
+          .items__check {
           margin-right: 0;
         }
+        i {
+          @include animation.quarterspin;
+          animation: quarterspin 0.5s ease-in-out;
+        }
+      }
 
       }
 
     }
       
-  }
   .command {
     display: flex;
     justify-content: center;
  
   button {
+    cursor: pointer;
     background-image: linear-gradient(to top, #9356dc, #ff79da);
   color: white;
   font-size: 20px;
@@ -123,4 +162,4 @@ body {
 
   }
 }
-  
+}

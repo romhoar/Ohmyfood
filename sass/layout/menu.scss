@@ -1,4 +1,7 @@
-.menu {
+@use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+#homepage {
     background-color: #f6f6f6;
   }
   .menu h2 {
@@ -12,7 +15,10 @@
   .menu_cards {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(2);
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: variables.$breakpoint) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   .card {
     background-color: white;
@@ -38,37 +44,20 @@
   }
   .card_description {
     position: relative;
-   
-  }
-  .card_description h3 {
+    @include mixins.heart-animated;
+    
+   h3 {
     margin: 0;
     padding-left: 0.4rem;
-  }
-  .card_description p {
+  } 
+   p {
     margin: 0.3rem;
     margin-bottom: 1rem;
   }
+}
+
+
   
-  .card_description i {
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-  
-  }
-  .card_description .fa-solid {
-    color: transparent;
-    background-image: linear-gradient(to top, #9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 200ms case-in-out;
-  }
-  .card_description:hover .fa-solid {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.2);
-  }
   
   .new {
     position: relative;

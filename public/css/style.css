@@ -141,7 +141,7 @@ main .city i {
     margin-top: 3rem;
   }
 }
-.menu {
+#homepage {
   background-color: #f6f6f6;
 }
 
@@ -156,7 +156,12 @@ main .city i {
 .menu_cards {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2);
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1000px) {
+  .menu_cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card {
@@ -186,38 +191,60 @@ main .city i {
 
 .card_description {
   position: relative;
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
 }
-
+.card_description::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.card_description::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+}
+.card_description:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
 .card_description h3 {
   margin: 0;
   padding-left: 0.4rem;
 }
-
 .card_description p {
   margin: 0.3rem;
   margin-bottom: 1rem;
-}
-
-.card_description i {
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.card_description .fa-solid {
-  color: transparent;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms case-in-out;
-}
-
-.card_description:hover .fa-solid {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.2);
 }
 
 .new {
@@ -366,18 +393,43 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.menu-grid h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.menu-grid h3::after {
+  content: "";
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
 .menu-grid .menu-groupe {
-  background-color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-grid .menu-groupe .menu-items {
+  background-color: white;
   display: flex;
   overflow: hidden;
   box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.75);
   border-radius: 1rem;
-  margin-bottom: 1rem;
+  overflow: hidden;
+  margin: 0.5rem;
+  text-overflow: ellipsis;
 }
 .menu-grid .menu-groupe .menu-items .description-items {
   padding: 1rem;
+  overflow: hidden;
+}
+.menu-grid .menu-groupe .menu-items .description-items h4, .menu-grid .menu-groupe .menu-items .description-items p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-grid .menu-groupe .menu-items .price {
   margin-left: auto;
@@ -389,6 +441,7 @@ body {
 .menu-grid .menu-groupe .menu-items .items__check {
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   background-color: #99E2D0;
   margin-right: -4rem;
   width: 4rem;
@@ -407,12 +460,23 @@ body {
 .menu-grid .menu-groupe .menu-items:hover .items__check {
   margin-right: 0;
 }
-
-.command {
+.menu-grid .menu-groupe .menu-items:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.menu-grid .command {
   display: flex;
   justify-content: center;
 }
-.command button {
+.menu-grid .command button {
+  cursor: pointer;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
   color: white;
   font-size: 20px;
@@ -423,7 +487,7 @@ body {
   transition: 200ms;
   margin-top: 1rem;
 }
-.command:hover {
+.menu-grid .command:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
