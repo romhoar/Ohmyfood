@@ -9,7 +9,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: $opacity;
-  transition: all 200ms ease-in-out;
+  transition: opacity 2s ease-in;
 }
 
 @mixin transform-zoom($zoom-level: 1.02, $transformation: null) {
@@ -30,7 +30,7 @@
   font-weight: $font-weight;
 }
 
-@mixin gradient($opacity: 0.9) {
+@mixin gradient($opacity: 0.8) {
   background-image: linear-gradient(
     0deg,
     rgba(147, 86, 220, $opacity),

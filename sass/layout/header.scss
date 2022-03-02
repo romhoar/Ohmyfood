@@ -4,11 +4,15 @@ main .city {
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    background-color: #d4d4d4;
+    background-color: #dad2d2;
     padding: 0.5rem;
+    height: 3rem;
   }
   main .city i {
     font-size: 1.5rem;
+  }
+  main .city h2 {
+    font-weight: 400;
   }
   .decorationNone {
     text-decoration: none;

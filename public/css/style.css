@@ -36,12 +36,17 @@ main .city {
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  background-color: #d4d4d4;
+  background-color: #dad2d2;
   padding: 0.5rem;
+  height: 3rem;
 }
 
 main .city i {
   font-size: 1.5rem;
+}
+
+main .city h2 {
+  font-weight: 400;
 }
 
 .decorationNone {
@@ -61,18 +66,21 @@ main .city i {
 }
 .explorer {
   text-align: center;
-  background-color: #f3f3f3;
   padding-bottom: 3rem;
+  background-color: #f3f3f3;
+  padding-bottom: 2rem;
 }
 
 .explorer h2 {
   margin: 0;
   font-size: 25px;
   padding-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .explorer p {
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .explorer button {
@@ -163,6 +171,9 @@ main .city i {
 .tuto {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  background-color: white;
 }
 
 .tuto ol {
@@ -255,7 +266,7 @@ main .city i {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: opacity 2s ease-in;
 }
 .card_description::after {
   display: inline-block;
@@ -274,7 +285,7 @@ main .city i {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: opacity 2s ease-in;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .card_description:hover::after {
@@ -400,7 +411,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: opacity 2s ease-in;
 }
 .resto__title h2::after {
   display: inline-block;
@@ -419,7 +430,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: opacity 2s ease-in;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .resto__title h2:hover::after {
