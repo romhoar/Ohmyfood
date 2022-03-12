@@ -449,7 +449,7 @@ body {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 @media (max-width: 1000px) {
@@ -459,7 +459,7 @@ body {
 }
 .menu-grid h3 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
 }
 .menu-grid h3::after {
@@ -482,7 +482,7 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   margin: 0.5rem;
-  animation: appear 1s;
+  animation: appear 2s;
   animation-fill-mode: both;
   text-overflow: ellipsis;
   background-color: white;
@@ -492,7 +492,7 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   margin: 0.5rem;
-  animation: appear 1s;
+  animation: appear 2s;
   animation-fill-mode: both;
   text-overflow: ellipsis;
   background-color: white;
@@ -502,7 +502,7 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   margin: 0.5rem;
-  animation: appear 1s;
+  animation: appear 2s;
   animation-fill-mode: both;
   text-overflow: ellipsis;
 }
@@ -665,21 +665,30 @@ body {
     transform: rotate(0);
   }
 }
-.menu-grid .menu-groupe .command {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
-  color: white;
-  font-size: 20px;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  border: none;
-  box-shadow: 1px 8px 17px -7px rgba(0, 0, 0, 0.75);
-  transition: 200ms;
-  margin-top: 1rem;
+
+.order {
+  height: 40vh;
+  display: grid;
+  place-items: center;
 }
-.menu-grid .menu-groupe .command:hover {
+.order button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: all 200ms;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.75);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
